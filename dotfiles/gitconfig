@@ -1,0 +1,66 @@
+[alias]
+  a=add
+  amend=commit --amend
+  branches=for-each-ref --sort=-committerdate --format='%(color:cyan)%(authordate:relative)	%(color:red)%(authorname)	%(color:white)%(color:bold)%(refname:short)' refs/remotes
+  c=commit
+  ca=commit --amend
+  ci=commit -a
+  co=checkout
+  d=diff
+  dc=diff --changed
+  ds=diff --staged
+  f=fetch
+  loll=log --abbrev-commit --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --
+  m=merge
+  one=log --pretty=oneline
+  outstanding=rebase -i @{u}
+  praise=blame
+  s=status
+  unpushed=log @{u}
+  wc=whatchanged
+  wip=rebase -i @{u}
+  zap=fetch -p
+
+[color]
+  ui=true
+
+[color "diff"]
+  commit=yellow bold
+  frag=magenta bold
+  meta=yellow
+  new=green bold
+  old=red bold
+  whitespace=red reverse
+
+[color "diff-highlight"]
+  newHighlight=green bold 22
+  newNormal=green bold
+  oldHighlight=red bold 52
+  oldNormal=red bold
+
+[commit]
+  gpgSign=true
+
+[core]
+  editor=nvim
+  pager=diff-so-fancy | less --tabs=4 -RFX
+
+[credential]
+  helper=osxkeychain
+
+[fetch]
+  prune=true
+
+[gpg]
+  program=gpg
+
+[grep]
+  lineNumber=true
+
+[help]
+  autocorrect=1
+
+[user]
+  email=me@robertwpearce.com
+  name=Robert Pearce
+  signingKey=07A0E482E5616C9B
