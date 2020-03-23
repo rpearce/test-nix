@@ -3,7 +3,7 @@ for p in $baseInputs $buildInputs; do
   export PATH=$p/bin${PATH:+:}$PATH
 done
 
-#echo $dotfiles
+echo $dotfiles
 
 function linkUp {
   ln -fs $0 "$1/bin/$(basename $0)"
