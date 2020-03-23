@@ -1,7 +1,6 @@
 pkgs: attrs:
   with pkgs;
   let
-    strings = import ./lib/strings.nix { lib = pkgs.lib.strings; };
     home_dir = builtins.getEnv "HOME"; # @TODO dotfiles symlinking
 
     defaultAttrs = {
@@ -20,7 +19,7 @@ pkgs: attrs:
       dotfiles = lib.attrsets.mapAttrsToList
                   (name: value: builtins.path {
                     path = value;
-                    name = strings.stringToValidNixPath "mgmt" name;
+                    name = lib.strings.validDerivationName "mgmt_${name}";
                   })
                   combinedAttrs.dotfiles;
     });

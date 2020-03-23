@@ -36,15 +36,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
-        "branch": "nixpkgs-unstable",
+        "branch": "valid-drv-name",
         "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
         "homepage": "https://github.com/NixOS/nixpkgs",
-        "owner": "NixOS",
-        "repo": "nixpkgs-channels",
-        "rev": "9b3515eb95d9b3bc033f43cd562fe2b14f9efd86",
-        "sha256": "1gc1hc30cqymkrrw4nj545md6h5dr9cpjf10vh080wwf5ybaggcl",
+        "owner": "Infinisil",
+        "repo": "nixpkgs",
+        "rev": "17ca3e86f9c5c55a333ade3f26f50f28bb4ff814",
+        "sha256": "09mp3ll24yr2qix1ryis55pzf5k03synl7slaxwymir5amhxwav8",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/9b3515eb95d9b3bc033f43cd562fe2b14f9efd86.tar.gz",
+        "url": "https://github.com/Infinisil/nixpkgs/archive/17ca3e86f9c5c55a333ade3f26f50f28bb4ff814.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
