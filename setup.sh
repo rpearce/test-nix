@@ -4,10 +4,6 @@ for p in $baseInputs $buildInputs; do
 done
 
 function link_bins {
-  ln -fs $0 "$1/bin/$(basename $0)"
-}
-
-function build_bins {
   mkdir -p $out/bin
 
   for t in $baseInputs $buildInputs; do
@@ -15,11 +11,11 @@ function build_bins {
       -type f     \
       -executable \
       -maxdepth 1 \
-      -exec /bin/bash -c 'link_bins $@ $out' {} \;
+      -exec /bin/bash -c 'ln -fs $0 $out/bin/$(basename $0)' {} \;
   done
 }
 
-function build_dotfiles {
+function link_dotfiles {
   for d in $dotfiles; do
     file_path=${d%=*}
     store_path=${d#*=}
@@ -32,11 +28,10 @@ function build_dotfiles {
   done
 }
 
-export -f build_bins \
-          build_dotfiles \
-          link_bins
+export -f link_bins \
+          link_dotfiles
 
 function build {
-  build_bins
-  build_dotfiles
+  link_bins
+  link_dotfiles
 }
