@@ -1,5 +1,4 @@
 let
-  #user = import ./user.nix;
   sources = import ./nix/sources.nix;
   pkgs = (import sources.nixpkgs) {
     config = {
@@ -12,8 +11,7 @@ in mkDerivation {
   buildInputs = with pkgs; [
     ascii
     bat
-    cachix
-    #exercism
+    exercism
     findutils
     gnupg
     jq
@@ -25,14 +23,12 @@ in mkDerivation {
     tree
 
     # git
-    #git
-    #gitAndTools.diff-so-fancy
+    git
+    gitAndTools.diff-so-fancy
 
-    # haskell
-    #haskellPackages.hlint
-    #haskellPackages.hoogle
-    #haskellPackages.stylish-haskell
-    #stack
+    # nix
+    cachix
+    niv
 
     # nodejs
     #nodejs-13_x

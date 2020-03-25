@@ -1,8 +1,6 @@
 pkgs: attrs:
   with pkgs;
   let
-    home_dir = builtins.getEnv "HOME"; # @TODO dotfiles symlinking
-
     defaultAttrs = {
       args = [ ./builder.sh ];
       baseInputs = [ coreutils findutils which ];
@@ -17,11 +15,11 @@ pkgs: attrs:
 
     finalAttrs = (combinedAttrs // {
       dotfiles = lib.attrsets.mapAttrsToList
-                  (name: value: builtins.path {
-                    path = value;
-                    name = lib.strings.validDerivationName "mgmt_${name}";
-                  })
-                  combinedAttrs.dotfiles;
+        (name: value: name + "=" + builtins.path {
+          path = value;
+          name = lib.strings.sanitizeDerivationName "mgmt_${name}";
+        })
+        combinedAttrs.dotfiles;
     });
   in
     derivation finalAttrs
