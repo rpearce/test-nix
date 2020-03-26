@@ -4,5 +4,5 @@ WIP
 To build:
 
 ```
-nix-build ./home.nix --show-trace
+nix-build --show-trace
 ```

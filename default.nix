@@ -5,9 +5,9 @@ let
       allowUnfree = true;
     };
   };
-  mkDerivation = import ./mgmt.nix pkgs;
+  mkDerivation = import ../mgmt/mgmt.nix pkgs;
 in mkDerivation {
-  name = "hello-yo";
+  name = "mgmt-home";
   buildInputs = with pkgs; [
     ascii
     bat
@@ -29,10 +29,6 @@ in mkDerivation {
     # nix
     cachix
     niv
-
-    # nodejs
-    #nodejs-13_x
-    #(yarn.override { nodejs = nodejs-13_x; })
   ];
   dotfiles = {
     ".gemrc"            = ./dotfiles/.gemrc;
@@ -44,5 +40,4 @@ in mkDerivation {
     ".tmux.conf"        = ./dotfiles/.tmux.conf;
     "cabal/config"      = ./dotfiles/cabal.cabal;
   };
-  #src = ./hello.tar.gz;
 }
