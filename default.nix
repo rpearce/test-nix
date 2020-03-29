@@ -1,43 +1,16 @@
 let
   sources = import ./nix/sources.nix;
-  pkgs = (import sources.nixpkgs) {
+  nixpkgs = (import sources.nixpkgs) {
     config = {
       allowUnfree = true;
     };
   };
-  mkDerivation = import ../mgmt/mgmt.nix pkgs;
-in mkDerivation {
-  name = "mgmt-home";
-  buildInputs = with pkgs; [
-    ascii
-    bat
-    exercism
-    findutils
-    gnupg
-    jq
-    ncdu
-    rename
-    ripgrep
-    speedtest-cli
-    tldr
-    tree
-
-    # git
-    git
-    gitAndTools.diff-so-fancy
-
-    # nix
-    cachix
-    niv
-  ];
-  dotfiles = {
-    ".gemrc"            = ./dotfiles/.gemrc;
-    ".ghci"             = ./dotfiles/.ghci;
-    ".inputrc"          = ./dotfiles/.inputrc;
-    ".psqlrc"           = ./dotfiles/.psqlrc;
-    ".ripgreprc"        = ./dotfiles/.ripgreprc;
-    ".stack/config.yml" = ./dotfiles/stack.yaml;
-    ".tmux.conf"        = ./dotfiles/.tmux.conf;
-    "cabal/config"      = ./dotfiles/cabal.cabal;
+  allPkgs = nixpkgs // pkgs;
+  callPackage = path: overrides:
+    let f = import path;
+    in f ((builtins.intersectAttrs (builtins.functionArgs f) allPkgs) // overrides);
+  pkgs = with nixpkgs; {
+    mkDerivation = import ../mgmt/mgmt.nix nixpkgs;
+    home = callPackage ./mgmt-home.nix { };
   };
-}
+in pkgs
