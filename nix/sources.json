@@ -11,6 +11,18 @@
         "url": "https://github.com/infinisil/all-hies/archive/4b6aab017cdf96a90641dc287437685675d598da.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "mgmt": {
+        "branch": "master",
+        "description": "⚙️ Use nix to manage your CLI tools, configuration dotfiles, and more",
+        "homepage": "https://github.com/rpearce/mgmt",
+        "owner": "rpearce",
+        "repo": "mgmt",
+        "rev": "e3e3a0d4398643c2d559124abcfd1a1bc29f73b9",
+        "sha256": "1yrm48vkhn4lxmn5sylgkvbz8y7bx70d5fc0l3wrw5ljxhwmsb8r",
+        "type": "tarball",
+        "url": "https://github.com/rpearce/mgmt/archive/e3e3a0d4398643c2d559124abcfd1a1bc29f73b9.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",

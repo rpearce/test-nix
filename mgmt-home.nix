@@ -5,8 +5,6 @@
 mkDerivation {
   name = "mgmt-home";
 
-  #meta = { priority = 0; };
-
   buildInputs = with pkgs; [
     ascii
     #bat
