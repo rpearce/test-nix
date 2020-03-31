@@ -41,10 +41,10 @@
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "Infinisil",
         "repo": "nixpkgs",
-        "rev": "8a41fafecf035ce2403048d96bd0e88d49584d1c",
-        "sha256": "0mv2lv6r60plkrgw7bndffc7gmnz2wlmw0nf5d8g0hjzivxrfpq5",
+        "rev": "4b206ac83ba23e44231088b1d5f23d96adbced05",
+        "sha256": "05hxp1f8nsmf88b41mqj7k4j94nw6ls26ap02fnp5ai5hiyp41v2",
         "type": "tarball",
-        "url": "https://github.com/Infinisil/nixpkgs/archive/8a41fafecf035ce2403048d96bd0e88d49584d1c.tar.gz",
+        "url": "https://github.com/Infinisil/nixpkgs/archive/4b206ac83ba23e44231088b1d5f23d96adbced05.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
