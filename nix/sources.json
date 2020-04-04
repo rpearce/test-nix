@@ -17,10 +17,10 @@
         "homepage": "https://github.com/rpearce/mgmt",
         "owner": "rpearce",
         "repo": "mgmt",
-        "rev": "e3e3a0d4398643c2d559124abcfd1a1bc29f73b9",
-        "sha256": "1yrm48vkhn4lxmn5sylgkvbz8y7bx70d5fc0l3wrw5ljxhwmsb8r",
+        "rev": "684c4b53e84e7abbfea59acd1fd154ba41f5de8f",
+        "sha256": "15grxp5bs9cazx5lcqf5mniwpcin9ymm1ql7f61p5h6p4r6jc9hw",
         "type": "tarball",
-        "url": "https://github.com/rpearce/mgmt/archive/e3e3a0d4398643c2d559124abcfd1a1bc29f73b9.tar.gz",
+        "url": "https://github.com/rpearce/mgmt/archive/684c4b53e84e7abbfea59acd1fd154ba41f5de8f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niv": {
@@ -36,15 +36,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
-        "branch": "valid-drv-name",
+        "branch": "master",
         "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
         "homepage": "https://github.com/NixOS/nixpkgs",
-        "owner": "Infinisil",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "4b206ac83ba23e44231088b1d5f23d96adbced05",
-        "sha256": "05hxp1f8nsmf88b41mqj7k4j94nw6ls26ap02fnp5ai5hiyp41v2",
+        "rev": "544821654d4f98189e1c81c7bb1cf98aa4b287cd",
+        "sha256": "0amzy4dwmi2wdzj3rx4cwwj7rk6clfykv06bwyj8sadc4akwjawa",
         "type": "tarball",
-        "url": "https://github.com/Infinisil/nixpkgs/archive/4b206ac83ba23e44231088b1d5f23d96adbced05.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/544821654d4f98189e1c81c7bb1cf98aa4b287cd.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
